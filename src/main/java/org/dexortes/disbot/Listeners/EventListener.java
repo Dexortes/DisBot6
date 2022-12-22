@@ -44,7 +44,7 @@ public class EventListener extends ListenerAdapter {
         }
         String userMention = Objects.requireNonNull(event.getMember()).getAsMention();
         switch(message){
-            case "Charge!" -> event.getChannel().sendMessage(userMention + " ordered to attack. Banelings are charging towards the target!").queue();
+            case "Charge" -> event.getChannel().sendMessage(userMention + " ordered to attack. Banelings are charging towards the target!").queue();
             case "Move" -> event.getChannel().sendMessage(userMention + " ordered to move. Banelings grouped up and moving to the destination.").queue();
             case "Borrow" -> event.getChannel().sendMessage(userMention + " ordered to borrow. Banelings borrowed and wait to explode").queue();
 //            case "Help" -> event.getChannel().sendMessage("Hey " + userMention + "! If you want help you may check " +
